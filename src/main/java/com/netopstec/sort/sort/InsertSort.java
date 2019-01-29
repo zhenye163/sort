@@ -7,19 +7,17 @@ package com.netopstec.sort.sort;
 public class InsertSort {
 
     public static void sort(int[] nums) {
-        // i为无序表中的元素下标，j为有序表中的元素下标，temp是待插入元素。
-        int i,j,temp;
-        for (i = 1;i < nums.length;i++) {
-            // 此时第i个元素为无序表的第一个元素（待插入元素）
+        // i为无序表中的元素下标，temp是待插入元素。
+        int i,temp;
+        for(i = 1;i < nums.length;i++) {
             temp = nums[i];
-            // 此时第j个元素为有序表的最后一个元素（有序表最大值下标）
-            j = i - 1;
-            for(;j >= 0 && temp < nums[j]; j--) {
-                // 当有序表中较大值比“待插入元素”大的元素，需要后移一位
-                nums[j + 1] = nums[j];
+            // k记录的是待插入元素应该在数组中位置的下标
+            int k;
+            // 比待插入元素大的元素右移，否则就是找到待插入元素的正确位置k
+            for(k = i;k > 0 && nums[k - 1] > temp;k-- ) {
+                nums[k] = nums[k - 1];
             }
-            // 此时（第j个元素 不大于 “待插入元素”），因此其正确下标应该是（j+1）
-            nums[j + 1] = temp;
+            nums[k] = temp;
         }
     }
 }

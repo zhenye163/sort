@@ -1,5 +1,6 @@
 package com.netopstec.sort.util;
 
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -32,10 +33,8 @@ public class IntArrayUtil {
      * @param j 数组下标j
      */
     public static void exchangeValue(int[] intArrays, int i, int j) {
-        // 这里交换下标i与下标j元素，不能通过加减法算出，只能通过定义临时变量来交换值
-        // ！！！因为i==j时，通过加减法会把该下标元素值变为0
-        int temp = intArrays[i];
-        intArrays[i] = intArrays[j];
-        intArrays[j] = temp;
+        intArrays[i] = intArrays[i] ^ intArrays[j];
+        intArrays[j] = intArrays[i] ^ intArrays[j];
+        intArrays[i] = intArrays[i] ^ intArrays[j];
     }
 }

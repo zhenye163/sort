@@ -17,25 +17,25 @@ public class SortTest {
      */
     @Test
     public void bubbleSortTest() {
-        int[] nums = IntArrayUtil.initIntArrays(10, 1000);
+        int[] nums = IntArrayUtil.initIntArrays(5, 10);
         System.out.println("排序前，数组顺序为：" + Arrays.toString(nums));
         BubbleSort.sort(nums);
         System.out.println("排序后，数组顺序为：" + Arrays.toString(nums));
     }
 
     /**
-     * 冒泡排序测试
+     * 堆排序测试
      */
     @Test
     public void heapSortTest() {
-        int[] nums = IntArrayUtil.initIntArrays(10, 1000);
+        int[] nums = IntArrayUtil.initIntArrays(10, 10);
         System.out.println("排序前，数组顺序为：" + Arrays.toString(nums));
         HeapSort.sort(nums);
         System.out.println("排序后，数组顺序为：" + Arrays.toString(nums));
     }
 
     /**
-     * 冒泡排序测试
+     * 直接插入排序测试
      */
     @Test
     public void insertSortTest() {
@@ -46,7 +46,7 @@ public class SortTest {
     }
 
     /**
-     * 冒泡排序测试
+     * 归并排序测试
      */
     @Test
     public void mergeSortTest() {
@@ -57,7 +57,7 @@ public class SortTest {
     }
 
     /**
-     * 冒泡排序测试
+     * 快速排序测试
      */
     @Test
     public void quickSortTest() {
@@ -68,7 +68,7 @@ public class SortTest {
     }
 
     /**
-     * 冒泡排序测试
+     * 基数排序测试
      */
     @Test
     public void radixSortTest() {
@@ -79,18 +79,18 @@ public class SortTest {
     }
 
     /**
-     * 冒泡排序测试
+     * 简单选择排序测试
      */
     @Test
     public void selectSortTest() {
-        int[] nums = IntArrayUtil.initIntArrays(10, 1000);
+        int[] nums = IntArrayUtil.initIntArrays(10, 10);
         System.out.println("排序前，数组顺序为：" + Arrays.toString(nums));
         SelectSort.sort(nums);
         System.out.println("排序后，数组顺序为：" + Arrays.toString(nums));
     }
 
     /**
-     * 冒泡排序测试
+     * 希尔排序测试
      */
     @Test
     public void shellSortTest() {
