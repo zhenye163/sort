@@ -14,7 +14,7 @@ public class InsertSort {
             // k记录的是待插入元素应该在数组中位置的下标
             int k;
             // 比待插入元素大的元素右移，否则就是找到待插入元素的正确位置k
-            for(k = i;k > 0 && nums[k - 1] > temp;k-- ) {
+            for(k = i;k > 0 && nums[k - 1] > temp;k--) {
                 nums[k] = nums[k - 1];
             }
             nums[k] = temp;

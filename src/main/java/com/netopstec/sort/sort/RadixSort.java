@@ -6,6 +6,10 @@ package com.netopstec.sort.sort;
  */
 public class RadixSort {
 
+    /**
+     * 提供给开发人员使用的基数排序
+     * @param nums 待排序列
+     */
     public static void sort(int[] nums) {
         int maxBit = getMaxBit(nums);
         // temp临时二维数组，列是余数（0-9），行是0或者待排序列中元素的值

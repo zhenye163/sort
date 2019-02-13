@@ -1,5 +1,7 @@
 package com.netopstec.sort.sort;
 
+import com.netopstec.sort.util.IntArrayUtil;
+
 /**
  * 冒泡排序
  * @author zhenye 2019/1/24
@@ -10,9 +12,7 @@ public class BubbleSort {
         for(int i = 0;i < nums.length;i++) {
             for(int j = 0; j < nums.length - i - 1;j++) {
                 if(nums[j] > nums[j+1]) {
-                    int temp = nums[j];
-                    nums[j] = nums[j+1];
-                    nums[j+1] = temp;
+                    IntArrayUtil.exchangeValue(nums, j, j+1);
                 }
             }
         }

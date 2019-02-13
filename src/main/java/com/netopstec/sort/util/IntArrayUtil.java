@@ -33,6 +33,10 @@ public class IntArrayUtil {
      * @param j 数组下标j
      */
     public static void exchangeValue(int[] intArrays, int i, int j) {
+        // 如果i==j，通过这种方法交换，会将当前位置的值重置为0
+        if(i == j) {
+            return;
+        }
         intArrays[i] = intArrays[i] ^ intArrays[j];
         intArrays[j] = intArrays[i] ^ intArrays[j];
         intArrays[i] = intArrays[i] ^ intArrays[j];

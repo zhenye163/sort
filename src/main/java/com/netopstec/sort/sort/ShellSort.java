@@ -5,7 +5,10 @@ package com.netopstec.sort.sort;
  * @author zhenye 2019/1/24
  */
 public class ShellSort {
-
+    /**
+     * 提供给开发者使用的希尔排序
+     * @param nums 待排序列
+     */
     public static void sort(int[] nums) {
         // i为无序表中的元素下标，j为有序表中的元素下标，temp是待插入元素，increment为增量。
         int i, j, temp, increment;

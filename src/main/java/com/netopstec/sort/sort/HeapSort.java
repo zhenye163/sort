@@ -16,8 +16,8 @@ public class HeapSort {
         for(int i = nums.length; i >= 1; i--) {
             // 堆顶元素为最大值，交换到其应该在的位置
             IntArrayUtil.exchangeValue(nums, 0, i - 1);
-            // 重新调整，保证数组的前i个元素符合大根堆
-            adjustBigHeap(nums, 0, i);
+            // 重新调整，保证数组的前i-1个元素符合大根堆
+            adjustBigHeap(nums, 0, i - 1);
         }
     }
 
